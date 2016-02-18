@@ -1,6 +1,7 @@
 PKGCONFIG	:= pkg-config
+PYTHON_NAME	:= python
 
-CPPFLAGS	+= -pthread -DPIC -DNDEBUG $(shell $(PKGCONFIG) --cflags python)
+CPPFLAGS	+= -pthread -DPIC -DNDEBUG $(shell $(PKGCONFIG) --cflags $(PYTHON_NAME))
 CFLAGS		+= -std=c99 -fPIC -O2 -Wextra
 LDFLAGS		+= -pthread
 

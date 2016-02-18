@@ -14,7 +14,7 @@ _clib.pynject_set.restype = ctypes.c_int
 _data = None
 
 def init():
-	if _pylib.pynject_init("pynject", "_callback") != 0:
+	if _pylib.pynject_init(b"pynject", b"_callback") != 0:
 		raise Exception("pynject init failed")
 
 def _set(granularity):
